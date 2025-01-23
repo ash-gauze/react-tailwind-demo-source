@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --navbar-padding: 12rem;
+  --viewport-width:480px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply rounded-xl w-full p-3 mx-2 bg-indigo-200
+    text-ellipsis text-lg ease-in duration-300 max-h-16
+    flex items-center justify-center max-w-40 overflow-hidden;
+  }
+
+  .nav-link:hover {
+    @apply  text-slate-200 bg-indigo-500 shadow-lg;
+  }
+
+  .nav-bar {
+    @apply duration-200 shadow-md bg-gradient-to-r 
+    from-blue-100 bg-white text-slate-800 flex-nowrap 
+    flex-auto justify-between md:justify-around flex-row 
+    pt-6 pb-5 inline-flex w-full;
+  }
+
+  .nav-burger {
+    @apply duration-300 hover:bg-slate-400 px-6 py-4
+    bg-slate-200 rounded-md text-xl hover:text-slate-50;
+  }
+
+  .control-button {
+    @apply hover:text-slate-200 hover:bg-indigo-500 hover:shadow-lg 
+    rounded-md min-w-[8rem] min-h-12 bg-indigo-200 
+    text-ellipsis text-lg ease-in duration-300 max-h-12 flex 
+    align-baseline justify-center max-w-[12rem] py-2;
+  }
+
+  .mock-image {
+    @apply flex items-center justify-center bg-slate-300 
+    min-h-[300px] min-w-[300px] m-0;
+  }
+
+  .carousel-collection {
+    transition:1s ease-out;
+  }
+  .carousel-viewport {
+    @apply border-2 rounded-md mx-auto w-[300px]  bg-gray-100 ;
+  }
+
+  main {
+    @apply py-6 px-16;
+  }
+
+  p {
+    @apply my-4;
+  }
+  .toast-container {
+    @apply flex flex-nowrap flex-col fixed hover:bg-slate-800 top-[18vh] right-12;
+  }
+
+  .toast-body {
+    @apply m-2 min-w-32 max-w-32 min-h-12 text-lg rounded-lg 
+    bg-emerald-400 flex flex-nowrap items-center justify-center 
+    duration-200 focus:bg-slate-400 transition-all;
+  }
+
+  thead,tbody {
+    
+  }
+
+
+  .toast-body-disappear {
+    @apply m-2 max-w-28 min-h-12 text-lg rounded-lg bg-emerald-400
+    flex flex-nowrap items-center justify-center duration-200
+    transition-opacity invisible;
+  }
+  
+
+  .sidebar-container {
+    background-color:lightgray;
+    position:absolute;
+    transition:.4s ease-in
+  }
+
+}  
+
+.animation {
+  transition:.10s ease-in
+}
+/*
+  ::-webkit-scrollbar{
+    display:none
+  }
+*/
+footer {
+  min-height: calc(100vh - 120px);
+  margin-top: 25rem;
+}
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
