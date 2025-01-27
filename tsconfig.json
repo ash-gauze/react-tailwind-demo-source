@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "allowTsImports":true
+  },
+
+    "include": [
+      "src/**/*"
+    ]
+}
