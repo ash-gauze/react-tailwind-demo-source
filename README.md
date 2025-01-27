@@ -1,1 +1,1 @@
-This project uses TailwindCSS, ReactJS and NextJS. 
+This project uses TailwindCSS, ReactJS ,NextJS and Typescript 
