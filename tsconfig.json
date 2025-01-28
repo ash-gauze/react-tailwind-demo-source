@@ -1,9 +1,39 @@
 {
   "compilerOptions": {
-    "allowTsImports":true
-  },
-
-    "include": [
-      "src/**/*"
+    "allowImportingTsExtensions": true,
+    "jsx": "preserve",
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
     ]
+  },
+  "include": [
+    ".next/types/**/*.tsx",
+    "src/**/*",
+    "src/app/",
+    "src/app/**/*",
+    "src/components**/*",
+    "src/components/sidebar**/*",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

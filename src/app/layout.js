@@ -1,7 +1,7 @@
 import "./globals.css";
 import Link from 'next/link';
-import {SidebarProvider} from '../components/sidebar/SidebarProvider.js';
-import {SidebarButton } from '../components/sidebar/SidebarButton.js';
+import {SidebarProvider,SidebarButton} from '../components/sidebar/index.tsx';
+
 
 export const metadata = {
   title:'Ashton\'\s Cool Website',
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
                 href='/carousel-demo'>carousels </Link>
               <Link className={'nav-link md:inline-flex hidden'} href='/component-demo'>components</Link>
               <Link className={'nav-link md:inline-flex hidden'} href='/pagination-demo'>pagination</Link>
-              <SidebarButton buttonStyle='md:hidden nav-burger mx-4'/>
+              <SidebarButton className='md:hidden nav-burger mx-4'/>
             </ul>
           </header>
           <main>
