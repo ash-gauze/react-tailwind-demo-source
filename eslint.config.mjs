@@ -1,22 +1,16 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import globals from 'globals'
+import pluginJs from '@eslint/js';
+import tseslint  from "typescript-eslint";
 
-const __filename = fileURLToPath(import.meta.url);
-//import meta ulr? 
-const __dirname = dirname(__filename);
+ 
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+const ignores = {ignores:['.git/*','.next/*','./node_modules']};
+const langConfig = {languageOptions:{globals:{...globals.node,...globals.browser}}};
 
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals"),
-  {
-ignores:["**./*",".next/*"],
-  }
+console.log(tseslint.configs.recommended)
 
-]
+export default [
+  langConfig,ignores,...tseslint.configs.recommended,pluginJs.configs.recommended
 
+];
 
-export default eslintConfig; 
