@@ -1,5 +1,6 @@
+
 'use client'
-import React,{useContext,useState} from 'react';
+import React,{useContext} from 'react';
 import {SidebarContext} from './SidebarContext.tsx'; 
 
 const SidebarClose = () =>  {
@@ -15,10 +16,6 @@ const SidebarClose = () =>  {
 const SidebarBody = () => {
   const sidebarContext = useContext(SidebarContext);
 
-  const handleClick = () => {
-    sidebarContext.setOpen(!sidebarContext.isOpen);
-  }
-
   return (
     <>
       <SidebarClose/>
@@ -28,3 +25,5 @@ const SidebarBody = () => {
     </>
   )
 }
+
+export {SidebarBody} 

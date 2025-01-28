@@ -16,6 +16,14 @@
   }
 }
 
+
+@layer base {
+
+
+}
+
+
+
 @layer components {
   .nav-link {
     @apply rounded-xl w-full p-3 mx-2 bg-indigo-200
@@ -90,6 +98,7 @@
     background-color:lightgray;
     position:absolute;
     transition:.4s ease-in
+    
   }
 
 }  
