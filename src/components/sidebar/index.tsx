@@ -1,9 +1,9 @@
-'use client'
+'use client' 
 
 import React,{useContext,useState} from 'react'
-
-import {SidebarContext} from './SidebarContext.js';
-import {SidebarBody} from './SidebarBody.js'
+import {SidebarContext} from './SidebarContext.tsx';
+import {SidebarBody} from './SidebarBody.tsx'
+import {SidebarButton} from './SidebarButton.tsx';
 
 const SidebarProvider = ({children}) => {
   const [isOpen,setOpen] = useState(false);
@@ -17,4 +17,5 @@ const SidebarProvider = ({children}) => {
   )
 }
 
-export {SidebarProvider}
+export {SidebarProvider,SidebarButton}
+

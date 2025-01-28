@@ -1,17 +1,21 @@
 'use client' 
 
 import React,{useContext} from 'react';
-import {SidebarContext} from './SidebarContext';
+import {SidebarContext} from './SidebarContext.tsx';
+import './style.css';
+import '../../app/globals.css';
 
-const SidebarButton = ({buttonStyle}) => {
+const SidebarButton = () => {
   const sidebarContext = useContext(SidebarContext);
+
   const handleClick = () => {
     sidebarContext.setOpen(!sidebarContext.isOpen);
-    console.log('hello');
   }
+
+
   return (
     <>
-      <button className={buttonStyle} onClick={handleClick}>≡</button>
+      <button className='nav-burger' onClick={handleClick}>≡</button>
     </>
   )
 }
