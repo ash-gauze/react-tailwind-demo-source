@@ -1,11 +1,11 @@
 'use client' 
 
-import React,{useContext,useState} from 'react'
+import React,{useState,FunctionComponent,PropsWithChildren} from 'react'
 import {SidebarContext} from './SidebarContext.tsx';
 import {SidebarBody} from './SidebarBody.tsx'
 import {SidebarButton} from './SidebarButton.tsx';
 
-const SidebarProvider = ({children}) => {
+const SidebarProvider:FunctionComponent<PropsWithChildren> = ({children}) => {
   const [isOpen,setOpen] = useState(false);
   const value = {isOpen,setOpen}
 

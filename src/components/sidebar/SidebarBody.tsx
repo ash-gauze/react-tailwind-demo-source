@@ -1,5 +1,5 @@
 'use client'
-import React, { useContext } from 'react';
+import React, { useContext} from 'react';
 import { SidebarContext } from './SidebarContext.tsx';
 import './style.css';
 
@@ -10,7 +10,7 @@ const SidebarBody = () => {
     sidebarContext.setOpen(!sidebarContext.isOpen);
   }
 
-  if (sidebarContext)
+  if (sidebarContext) {
 
     return (
       <>
@@ -66,7 +66,9 @@ const SidebarBody = () => {
         </div>
       </>
     )
+} else {
+  return 'sidebar context is null or undefined'
 }
-
+}
 export { SidebarBody }
 

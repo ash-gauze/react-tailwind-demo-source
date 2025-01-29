@@ -1,11 +1,9 @@
 'use client'
 
 import { SidebarButton} from '../../components/sidebar/index.tsx';
-import { useContext } from 'react'
 import { ToastProvider } from '../../components/toast/ToastProvider.js';
 import { ToastConsumerButton, ToastConsumerArray } from '../../components/toast/ToastConsumer.js'
-import { Accordion } from '../../components/accordion/Accordion.js';
-import { ToastTestButton} from '../../components/toast/ToastTestButton.js'
+import { Accordion } from '../../components/accordion/index.tsx';
 import '../globals.css';
 
 const page = ({ children }) => {

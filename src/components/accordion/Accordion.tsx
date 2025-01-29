@@ -1,9 +1,11 @@
-'use client' 
+
+'use client'
 
 import React,{useRef,useState} from 'react';
 
+const Accordion = ({children}) => {
 
-const Accordion = ({children}) => { 
+  
 
   
   const openStyle = ''
@@ -37,3 +39,5 @@ const Accordion = ({children}) => {
 }
 
 export {Accordion }
+
+
