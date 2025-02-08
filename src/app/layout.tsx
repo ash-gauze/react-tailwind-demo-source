@@ -1,15 +1,24 @@
+
 import "./globals.css";
+import React from 'react'
 import Link from 'next/link';
 import {SidebarProvider,SidebarButton} from '../components/sidebar/index.tsx';
 
+type metadata = {
+  title:string,
+  canonical:string
+}
 
-export const metadata = {
-  title:'Ashton\'\s Cool Website',
+export const metadata:metadata = {
+  title:'Ashton\'s Cool Website',
   canonical:'https://my-website.org/'
 }
 //z index: carousel viewport = 10, navbar = 20, sidebar = 40, modal bg = 30 
 
 export default function RootLayout({ children }) {
+  
+
+
   return (
     <html lang="en">
       <body>
@@ -21,7 +30,7 @@ export default function RootLayout({ children }) {
                 href='/carousel-demo'>carousels </Link>
               <Link className={'nav-link md:inline-flex hidden'} href='/component-demo'>components</Link>
               <Link className={'nav-link md:inline-flex hidden'} href='/pagination-demo'>pagination</Link>
-              <SidebarButton className='md:hidden nav-burger mx-4'/>
+              <SidebarButton className={'md:hidden nav-burger mx-4'}/>
             </ul>
           </header>
           <main>
@@ -35,6 +44,6 @@ export default function RootLayout({ children }) {
       </body>
     </html>
   );
-}
+};
 
 

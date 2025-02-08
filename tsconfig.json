@@ -11,7 +11,7 @@
     "allowImportingTsExtensions":true,
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "removeComments": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -43,7 +43,12 @@
     "**/*.tsx",
     "**/src/*.tsx",
     "next-env.d.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "**/*.js",
+    "**/*.jsx",
+    "**/src/*.jsx",
+    "next-env.d.ts",
+    ".next/types/**/*.js"
   ],
   "exclude": [
     "node_modules"
