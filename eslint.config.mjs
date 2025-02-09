@@ -8,16 +8,31 @@ const compat = new FlatCompat({
 })
 
 
-
 const ignores = {ignores:['.git/*','.next/*','./node_modules']};
 const langConfig = {languageOptions:{globals:{...globals.node,...globals.browser}}};
 const nextConfig = compat.config({extends:['next/core-web-vitals']});
+const tSConfig  = tseslint.config({rules:
+{
+  'no-unused-vars': 'off', '@typescript-eslint/no-unused-vars': 'warn',
+    'no-unused-expressions':'off','@typescript-eslint/no-unused-expressions':'warn'
+}
+}
+);
 
 
+/*
+ default config export is a configArray of config objects   
+
+
+*/
 console.log(tseslint.configs.recommended)
 
-export default [
-  langConfig,ignores,...tseslint.configs.recommended,pluginJs.configs.recommended,...nextConfig,
-
+const eslintConfig = [ 
+  langConfig,ignores,
+  ...tseslint.configs.recommended,
+  pluginJs.configs.recommended,
+  ...nextConfig, 
+  ...tSConfig
 ];
 
+export default eslintConfig;

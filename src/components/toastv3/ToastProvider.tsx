@@ -3,7 +3,6 @@
 import React from 'react'
 import { ToastContext } from './ToastContext.tsx';
 import { toastReducer } from './ToastReducer.tsx';
-import type {ToastActionType} from './ToastReducer.tsx';
 import type { ToastContextTypes,ToastType} from './ToastContext.tsx'
 
 

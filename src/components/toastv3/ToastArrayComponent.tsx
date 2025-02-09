@@ -2,7 +2,7 @@
 'use client'
 
 import React,{JSX} from 'react';
-import {ToastContext,useToastContext,ToastType} from './ToastContext.tsx';
+import {useToastContext,ToastType} from './ToastContext.tsx';
 import {ToastContextTypes} from './ToastContext.tsx';
 
 
