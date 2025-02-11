@@ -1,24 +1,28 @@
 
 'use client'
 
-import React,{useContext,useState} from 'react';
+import React,{useState,JSX} from 'react';
 import {SidebarContext} from './SidebarContext.tsx';
+import { ISidebarContext} from './SidebarContext.tsx';
 import {SidebarBody}    from './SidebarBody.tsx';
-import {SidebarButton} from './SidebarButton.tsx';
 
 
+interface SidebarProviderProps {
+  children?:React.ReactNode;
+  attributes?:JSX.IntrinsicAttributes;
+}
 
-const SidebarProvider = ({children}) => {
-  const [isOpen,setOpen] = useState(false);
-  const value = {isOpen,setOpen}
+const SidebarProvider = (props:SidebarProviderProps) => {
+  const [isOpen,setOpen] = useState(null);
+  const value:ISidebarContext = {sidebarState:isOpen,setSidebarState:setOpen}
 
   return (
     <SidebarContext.Provider value={value}>
       <SidebarBody/>
-      {children}
+      {props.children}
     </SidebarContext.Provider>
   )
 }
 
-export {SidebarProvider,SidebarButton}
+export {SidebarProvider}
 

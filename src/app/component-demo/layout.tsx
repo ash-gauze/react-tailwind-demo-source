@@ -1,11 +1,14 @@
+import React from 'react';
 
+interface LayoutProps {
+  children?:React.ReactNode;
+}
 
-export default function layout({children}) {
+export default function layout(props:LayoutProps) {
 
   return(
-
   <>
-{children}
+{props.children}
 
   </>
   )

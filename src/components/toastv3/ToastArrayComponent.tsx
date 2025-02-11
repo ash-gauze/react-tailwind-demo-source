@@ -36,7 +36,7 @@ interface ToastProps {
 //register the toast to the *useInterval* function
 const Toast = (props:ToastProps) => {
  
-  const {id,type,bodyText} = props.toastProps;
+  const {id,bodyText} = props.toastProps;
   const handleDismiss = props.dismissButton;
   
   useInterval(handleDismiss,3000,id,true)
@@ -50,9 +50,7 @@ const Toast = (props:ToastProps) => {
   )
 }
 
-interface ToastArrayProps extends React.ComponentPropsWithoutRef<'button'> {
-  toasts:Array<ToastType>;
-}
+
 
 const ToastArrayComponent = () => {
   const {toastArrayState,handleDec} = useToastContext() as unknown as ToastContextTypes;

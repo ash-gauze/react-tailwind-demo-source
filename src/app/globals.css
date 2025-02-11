@@ -103,6 +103,12 @@
 
 }  
 
+.scrollStyle {
+  overflow-y:scroll;
+  -ms-overflow-style:none;
+  scrollbar-width:none;
+}
+
 .animation {
   transition:.10s ease-in
 }

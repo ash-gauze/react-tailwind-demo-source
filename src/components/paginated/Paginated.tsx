@@ -46,6 +46,13 @@ const Pagination = () => {
       setIndexB(indexB+1);
     }
   }
+
+/*
+
+
+
+*/
+
   return (
     <>
     <div className={'flex space-apart justify-around flex-row nowrap pb-4'}>

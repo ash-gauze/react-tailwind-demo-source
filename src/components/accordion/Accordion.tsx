@@ -1,14 +1,7 @@
 
 'use client'
 
-import React,{useRef,useState,FunctionComponent,PropsWithChildren} from 'react';
-
-/*
-interface Accordion {
-  className:string,
-  children:FunctionComponent<PropsWithChildren>,
-}
-*/
+import React,{useState} from 'react';
 
 type AccordionProps = {children:React.ReactNode}
 
@@ -18,8 +11,10 @@ const Accordion = ({children}:AccordionProps) => {
   const closedStyle = 'overflow-hidden max-h-[0rem]';
 
   const [isOpen,setOpen] = useState(false);
+
   const [accStyle,setAccStyle] = useState(closedStyle) 
-  const accRef = useRef(null) as unknown as React.Reference;
+
+
   const handleOpen = () => {
     if(isOpen === true) {
       setAccStyle(closedStyle);

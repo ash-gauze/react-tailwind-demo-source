@@ -7,7 +7,7 @@ const page = () => {
 
   return (
     <>
-      <Carousel />
+      <Carousel/>
     </>
   )
 }

@@ -1,26 +1,27 @@
 'use client'
 import React, { useContext} from 'react';
 import { SidebarContext } from './SidebarContext.tsx';
+import type { ISidebarContext} from './SidebarContext.tsx'
 import './style.css';
 
 const SidebarBody = () => {
-  const sidebarContext = useContext(SidebarContext);
+  const {sidebarState,setSidebarState}= useContext(SidebarContext) as ISidebarContext;
 
   const handleClick = () => {
-    sidebarContext.setOpen(!sidebarContext.isOpen);
+    setSidebarState(!sidebarState);
   }
 
-  if (sidebarContext) {
+  if (sidebarState) {
 
     return (
       <>
-        <div onClick={handleClick} className={`${sidebarContext.isOpen ? 'z-30 fixed top-0 left-0 bg-black bg-opacity-25 w-full h-full' : 'hidden'}`} onBlur={() => sidebarContext.setOpen(false)}>
+        <div onClick={handleClick} className={`${sidebarState? 'z-30 fixed top-0 left-0 bg-black bg-opacity-25 w-full h-full' : 'hidden'}`} onBlur={() => setSidebarState(false)}>
         </div>
 
         <div className={`
                         overflow-y-auto  h-screen focus:visible 
                         flex flex-col place-items-start flex-nowrap 
-                        bg-white ${sidebarContext.isOpen ? 'w-[18rem] left-0 top-0' : 'left-[-18rem] top-0'} fixed z-40 `}>
+                        bg-white ${sidebarState ? 'w-[18rem] left-0 top-0' : 'left-[-18rem] top-0'} fixed z-40 `}>
 
 
 

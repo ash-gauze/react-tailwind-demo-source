@@ -5,17 +5,21 @@ import {SidebarContext} from './SidebarContext.tsx';
 import './style.css';
 import '../../app/globals.css';
 
-const SidebarButton = () => {
+interface SidebarButtonProps {
+  className:string;
+}
+
+const SidebarButton = (props:SidebarButtonProps) => {
   const sidebarContext = useContext(SidebarContext);
 
   const handleClick = () => {
-    sidebarContext.setOpen(!sidebarContext.isOpen);
+    sidebarContext?.setSidebarState(!sidebarContext.sidebarState);
   }
 
 
   return (
     <>
-      <button className='nav-burger' onClick={handleClick}>≡</button>
+      <button className={props.className} onClick={handleClick}>≡</button>
     </>
   )
 }
