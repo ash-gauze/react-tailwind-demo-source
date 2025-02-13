@@ -13,7 +13,7 @@ import '../globals.css';
 const page = () => {
 
 
-  const gridItemOne = 'px-4 py-4 mx-8 my-4 text-[--color-one] bg-[--color-two] rounded-[--corner-round]';
+
 
 
 
