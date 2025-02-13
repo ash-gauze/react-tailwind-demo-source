@@ -3,11 +3,15 @@
 
 import React,{useState} from 'react';
 
-type AccordionProps = {children:React.ReactNode}
+//type AccordionProps = {children:React.ReactNode}
 
-const Accordion = ({children}:AccordionProps) => {
-  
-  const openStyle = '';
+interface AccordionProps  {
+  children?:React.ReactNode;
+  className?:string;
+}
+
+const Accordion = (props:AccordionProps) => {
+  const openStyle = 'min-h-24';
   const closedStyle = 'overflow-hidden max-h-[0rem]';
 
   const [isOpen,setOpen] = useState(false);
@@ -28,9 +32,9 @@ const Accordion = ({children}:AccordionProps) => {
   
   return (
     <>
-      <button className={'control-button bg-slate-200 my-4'} onClick={handleOpen}>Accordion</button>
+      <button className={props.className} onClick={handleOpen}>Accordion</button>
     <div className={`${accStyle}`}>
-        {children}
+        {props.children}
     </div>
   </>
   )

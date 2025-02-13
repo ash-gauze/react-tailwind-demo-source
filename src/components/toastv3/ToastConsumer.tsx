@@ -3,13 +3,17 @@
 
 import { useToastContext } from './ToastContext';
 
+interface ToastConsumerProps {
+  className?:string;
+}
 
-const ToastContextConsumer = () => {
+
+const ToastContextConsumer = (props:ToastConsumerProps) => {
   const {handleInc}= useToastContext();
   if(handleInc) {
   return (
     <>
-    <button onClick={handleInc}>click to iterate</button>
+    <button className={props.className} onClick={handleInc}>click for toasts</button>
     </>
   )}
   else { 

@@ -27,22 +27,20 @@ export default function RootLayout(props:IRootLayout) {
     <html lang="en">
       <body>
         <SidebarProvider>
-          <header className={'w-full z-20 bg-white fixed top-0 left-0'}>
+          <header className={'w-full z-20 bg-[--color-one] fixed top-0 left-0'}>
             <ul className={'nav-bar'}>
               <Link className={'nav-link'} href={'/'}>home </Link>
               <Link className={'nav-link md:inline-flex hidden'}
                 href={'/carousel-demo'}>carousels </Link>
               <Link className={'nav-link md:inline-flex hidden'} href={'/component-demo'}>components</Link>
               <Link className={'nav-link md:inline-flex hidden'} href={'/pagination-demo'}>pagination</Link>
-              <SidebarButton className={'md:hidden nav-burger mx-4'}/>
+              <SidebarButton className={'md:hidden nav-link max-w-12 mx-4'}/>
             </ul>
           </header>
-          <main>
-            <div className={'py-20'}>
-            </div>
+          <main className={'mt-[8rem]  m-auto max-w-[65rem]'}>
             {props.children}
           </main>
-          <footer className={'w-full px-6 py-4 bg-slate-300'}>
+          <footer className={'w-full px-6 py-4 bg-[--color-one]'}>
           </footer>
         </SidebarProvider>
       </body>

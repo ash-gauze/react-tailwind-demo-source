@@ -47,32 +47,24 @@ const Pagination = () => {
     }
   }
 
-/*
-
-
-
-*/
-
   return (
     <>
     <div className={'flex space-apart justify-around flex-row nowrap pb-4'}>
-    <button className={'control-button'} onClick={handlePrevPosts}>previous page</button>
-    <button className={'control-button'} onClick={()=>handlePageResize("SHRINK")}>see less</button>
-    <button className={'control-button'} onClick={()=>handlePageResize("GROW")}>see more</button>
-    <button className={'control-button'} onClick={handleNextPosts}>next page</button>
+    <button className={'article-button min-w-[8rem]'} onClick={handlePrevPosts}>previous page</button>
+    <button className={'article-button min-w-[8rem]'} onClick={()=>handlePageResize("SHRINK")}>see less</button>
+    <button className={'article-button min-w-[8rem]'} onClick={()=>handlePageResize("GROW")}>see more</button>
+    <button className={'article-button min-w-[8rem]'} onClick={handleNextPosts}>next page</button>
     </div>
       <ul>
         {currentPosts.map((post) => (
-          <div className={'bg-slate-100 my-4 mb-[3rem]'} key={post.id}>
-            <h1 className={'bg-slate-200 capitalize text-xl mt-4 mb-6'}>{post.title}</h1>
+          <div className={'bg-[--color-one] my-4 mb-[3rem]'} key={post.id}>
+            <h1 className={'bg-[--color-two] capitalize text-[--color-one] text-xl mt-4 mb-6'}>{post.title}</h1>
             <article>{post.body}</article>
           </div>
         ))}
       </ul>
-
     </>
   )
 }
-
 
 export {Pagination}

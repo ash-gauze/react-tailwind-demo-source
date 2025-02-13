@@ -3,7 +3,7 @@
 
 import React,{JSX} from 'react';
 import {useToastContext,ToastType} from './ToastContext.tsx';
-import {ToastContextTypes} from './ToastContext.tsx';
+
 
 
 const useInterval = (callback:(toastKey:string)=>void,delayTime:number,toastKey:string,shouldRun:boolean) => {
@@ -42,7 +42,6 @@ const Toast = (props:ToastProps) => {
   useInterval(handleDismiss,3000,id,true)
 
   return (
-    
     <button  onClick={()=>handleDismiss(id)} className={'control-button my-[.2rem]'}>
       <p>{bodyText}</p>
     </button>
@@ -51,19 +50,16 @@ const Toast = (props:ToastProps) => {
 }
 
 
-
 const ToastArrayComponent = () => {
-  const {toastArrayState,handleDec} = useToastContext() as unknown as ToastContextTypes;
+  const {toastArrayState,handleDec} = useToastContext(); 
 
-  if(toastArrayState !== undefined) 
+//if(toastArrayState !==null)
   return(
     <ul className={'toast-container'}>
     {toastArrayState.map(item => <Toast toastProps={item} dismissButton={handleDec} key={item.id}/>)}
     </ul>
   )
-  else {
-    return (<></>)
-  }
 }
+
 
 export {ToastArrayComponent}
