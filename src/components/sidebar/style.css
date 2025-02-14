@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components { 
+ 
+  .sidebar-body {
+    @apply overflow-y-auto h-screen focus:visible flex flex-col place-items-start flex-nowrap bg-white
+  }
+  
+  .sidebar-button {
+    @apply pt-3 px-4 border-l-2 border-white text-slate-600 
+    hover:text-slate-900 hover:border-slate-300
+    focus:text-slate-900 focus:border-orange-600
+  }
+
+  .sidebar-heading {
+    @apply focus:underline text-xl pt-8 pb-3 decoration-orange-300
+  }
+
+  .sidebar-container {
+    @apply flex flex-col flex-nowrap place-items-start bg-slate-100 my-4 mx-8
+  }
+}

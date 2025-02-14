@@ -1,0 +1,1 @@
+(()=>{var e={};e.id=220,e.ids=[220],e.modules={2697:()=>{throw Error("Module build failed (from ../node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):\nError: failed to process")}};var r=require("../webpack-runtime.js");r.C(e);var d=r(r.s=2697);module.exports=d})();
