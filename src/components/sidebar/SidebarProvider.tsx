@@ -13,7 +13,7 @@ interface SidebarProviderProps {
 }
 
 const SidebarProvider = (props:SidebarProviderProps) => {
-  const [isOpen,setOpen] = useState(null);
+  const [isOpen,setOpen] = useState(false);
   const value:ISidebarContext = {sidebarState:isOpen,setSidebarState:setOpen}
 
   return (
